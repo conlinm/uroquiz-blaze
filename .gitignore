@@ -1,0 +1,5 @@
+# ignore all meteor files.
+/.meteor/
+# ignore the packages, will need to install these
+/packages/
+smart.*
