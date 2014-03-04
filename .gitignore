@@ -1,3 +1,4 @@
 /.meteor/
 /packages/
 smart.*
+.DS_Store
