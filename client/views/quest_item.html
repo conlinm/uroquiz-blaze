@@ -1,15 +1,35 @@
 <template name="questItem">
   <div class="quest">
-    <div class="quest-content">
-      <p>{{Question}}
+    <!--<div class="quest-content">-->
+    <div class="panel panel-default">
+    	<div class="panel-heading">
+    	<h3 class="panel-title">{{Question}}</h3>
+    	<div class="panel-body">
+	  </div>
       	<ul class="list-group">
       	<li class="list-group-item">A. {{A}}</li>
       	<li class="list-group-item">B. {{B}}</li>
       	<li class="list-group-item">C. {{C}}</li>
       	<li class="list-group-item">D. {{D}}</li>
       	<li class="list-group-item">E. {{E}}</li>
-      	<li class="list-group-item">Answer: {{Answer}}</li>
-      	</p>
+      	</ul>
+      	<div class="input-group">
+		  <span class="input-group-btn">
+		  <button class="btn btn-default" type="button">Submit</button>
+		  </span>
+		  <input type="text" class="form-control" placeholder="Answer">
+	</div>
+      	<!--<div class="input-group">
+		 <span class="btn-group-vertical">
+			 <button type="button" class="btn btn-default">A. {{A}}</button>
+			 <button type="button" class="btn btn-default">B. {{B}}</button>
+			 <button type="button" class="btn btn-default">C. {{C}}</button>
+			 <button type="button" class="btn btn-default">D. {{D}}</button>
+			 <button type="button" class="btn btn-default">E. {{E}}</button>
+		</span>
+		<input type="text" class="form-control">
+	</div>-->
     </div>
   </div>
+  
 </template>
