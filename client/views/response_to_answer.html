@@ -1,0 +1,10 @@
+<template name="responseToAnswer">
+	{{#if selectedAnswer}}
+<div class="details">
+   <div class="none">You Answered! The correct answer is {{Answer}}</div>
+   {{Explanation}}
+  </div>
+  {{else}}
+  <div class="none"><h4>Click an answer</h4></div>
+  {{/if}}
+</template>

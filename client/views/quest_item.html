@@ -7,12 +7,13 @@
     	<div class="panel-body">
 	  </div>
       	<ul class="list-group">
-      	<li class="list-group-item">A. {{A}}</li>
-      	<li class="list-group-item">B. {{B}}</li>
-      	<li class="list-group-item">C. {{C}}</li>
-      	<li class="list-group-item">D. {{D}}</li>
-      	<li class="list-group-item">E. {{E}}</li>
+      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="A" onclick="setAnswer('A')">A</button>     {{A}}</li>
+      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="B">B</button>    {{B}}</li>
+      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="C">C</button>    {{C}}</li>
+      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="D">D</button>    {{D}}</li>
+      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="E">E</button>    {{E}}</li>
       	</ul>
+        {{> responseToAnswer}}
       	<!--<p>
       	Answer:
       	</p>

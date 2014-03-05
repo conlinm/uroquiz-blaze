@@ -1,4 +1,4 @@
 /* LESS declarations go here */
-.list-group.selected {
+.list-group-item.selected {
     background-color: yellow;
 }
