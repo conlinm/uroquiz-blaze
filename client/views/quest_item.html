@@ -7,12 +7,15 @@
     	<div class="panel-body">
 	  </div>
       	<ul class="list-group">
-      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="A" onclick="setAnswer('A')">A</button>     {{A}}</li>
+      	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="A" onclick="{{setAnswer}}">A</button>     {{A}}</li>
       	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="B">B</button>    {{B}}</li>
       	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="C">C</button>    {{C}}</li>
       	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="D">D</button>    {{D}}</li>
       	<li class="list-group-item"><button type="button" name="btn" class="btn btn-default" value="E">E</button>    {{E}}</li>
       	</ul>
+        {{#if imagePresent}}
+          <p>There are images</p>
+          {{/if}}
         {{> responseToAnswer}}
       	<!--<p>
       	Answer:

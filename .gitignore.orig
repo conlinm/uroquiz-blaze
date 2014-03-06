@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+/.meteor/
+/packages/
+smart.*
+.DS_Store
+=======
+# ignore all meteor files.
+/.meteor/
+# ignore the packages, will need to install these
+/packages/
+smart.*
+>>>>>>> b1eaef280290859680150ad1f3ac36b609407523
