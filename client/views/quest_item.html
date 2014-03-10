@@ -4,15 +4,14 @@
     <div class="panel panel-default">
     	<div class="panel-heading">
     	<h3 class="panel-title">{{Question}}</h3>
-    	<div class="panel-body">
 	  </div>
-      	<ul class="list-group">
-      	<li class="list-group-item"><input type="button" name="btn" class="btn btn-default" value="A" onclick="{{setAnswer}}">     {{A}}</li>
-      	<li class="list-group-item"><input type="button" name="btn" class="btn btn-default" value="B">    {{B}}</li>
-      	<li class="list-group-item"><input type="button" name="btn" class="btn btn-default" value="C">    {{C}}</li>
-      	<li class="list-group-item"><input type="button" name="btn" class="btn btn-default" value="D">    {{D}}</li>
-      	<li class="list-group-item"><input type="button" name="btn" class="btn btn-default" value="E">    {{E}}</li>
-      	</ul>
+    <div class="panel-body">
+          <div class="row"><div class="col-md-8" id="answer" value="A">A.   {{A}}</div></div>
+          <div class="row"><div class="col-md-8" id="answer" value="B">B.   {{B}}</div></div>
+          <div class="row"><div class="col-md-8" id="answer" value="C">C.   {{C}}</div></div>
+          <div class="row"><div class="col-md-8" id="answer" value="D">D.   {{D}}</div></div>
+          <div class="row"><div class="col-md-8" id="answer" value="E">E.   {{E}}</div></div>
+      	
         {{#if imagePresent}}
           <p>There are images</p>
           {{/if}}
