@@ -1,9 +1,11 @@
+Session.setDefault('selectedAnswer', null);
 Session.setDefault('setAnswer', null);
 
 Template.questItem.events({
-	'click': function (evt, templ){
+	'click #answer': function (evt, templ){
 		alert("clicked");
-		Session.set("setAnswer", evt.value);
+		var ans = $(this).val();
+		Session.set("selectedAnswer", ans);
 	},
    //  'click #answerBtn': function (evt, templ) {
    //  	alert(templ.find("#answerBtn").value);

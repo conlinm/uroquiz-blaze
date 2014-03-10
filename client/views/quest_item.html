@@ -6,12 +6,13 @@
     	<h3 class="panel-title">{{Question}}</h3>
 	  </div>
     <div class="panel-body">
-          <div class="row"><div class="col-md-8" id="answer" value="A">A.   {{A}}</div></div>
-          <div class="row"><div class="col-md-8" id="answer" value="B">B.   {{B}}</div></div>
-          <div class="row"><div class="col-md-8" id="answer" value="C">C.   {{C}}</div></div>
-          <div class="row"><div class="col-md-8" id="answer" value="D">D.   {{D}}</div></div>
-          <div class="row"><div class="col-md-8" id="answer" value="E">E.   {{E}}</div></div>
-      	
+    <ul class="list-group" id="answer">
+        <li class="list-group-item" id="answerA" value="A">A.     {{A}}</li>
+        <li class="list-group-item" id="answerB"value="B">B.    {{B}}</li>
+        <li class="list-group-item" id="answerC"value="C">C.    {{C}}</li>
+        <li class="list-group-item" id="answerD"value="D">D.    {{D}}</li>
+        <li class="list-group-item" id="answerE"value="E">E.    {{E}}</li>
+        </ul>
         {{#if imagePresent}}
           <p>There are images</p>
           {{/if}}
