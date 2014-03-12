@@ -1,35 +1,31 @@
 Session.setDefault('selectedAnswer', null);
 Session.setDefault('setAnswer', null);
+Session.setDefault('isSelected', null);
 
 Template.questItem.events({
-	'click #answer': function (evt, templ){
-		alert("clicked");
-		var ans = $(this).val();
+	'click #answer': function (e, tmpl){
+		var ans = e.target.id;
+		// var answer = tmpl.find("[#answer]")
+		e.currentTarget.style.backgroundColor = " ";
+		e.target.style.backgroundColor = "yellow";
 		Session.set("selectedAnswer", ans);
 	},
-   //  'click #answerBtn': function (evt, templ) {
-   //  	alert(templ.find("#answerBtn").value);
-   //  Session.set('setAnswer', 'A');},
-   //  'click #answerBtnB': function (evt, templ) {
-   //  Session.set('setAnswer', 'B');},
-   // 'click #answerBtnC': function (evt, templ) {
-   //  Session.set('setAnswer', 'C');},
-   //  'click #answerBtnD': function (evt, templ) {
-   //  Session.set('setAnswer', 'D');},
-   //  'click #answerBtnE': function (evt, templ) {
-   //  Session.set('setAnswer', 'E');},
+	'click #submitAnswer': function (e, tmpl){
+		var myAnswer = Session.get("selectedAnswer");
+		Session.set("setAnswer", myAnswer);
+	}
   });
 
-// Template.questItem.helpers  ({
-// 	// setAnswer: function () { return Session.get('setAnswer');
-//  //      },
-// 	// imagePresent: function() {
-// 	// var present = quest.Image_File.findOne(Session.get('selectedQuestId'));
-// 	// if (present !== null) {
-// 	// 	return true;
-// 	// }
-// 	// else {return false};
-// });
-// // recordAnswer = function(answer) {
-// // 	Session set('setAnswer', answer);
-// // }
+Template.questItem.helpers  ({
+		choice: function (){
+			return Session.get("setAnswer")
+		}
+});
+Template.questItem.imagePresent = function() {
+	return ! _.contains(this.Image_File, null);
+}
+// $('li').click(
+// 	function(){
+// 		$('.highlight').removeClass('highlight');
+//         		$(this).addClass('highlight');
+//         	});

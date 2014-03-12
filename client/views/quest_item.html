@@ -1,42 +1,25 @@
 <template name="questItem">
   <div class="quest">
-    <!--<div class="quest-content">-->
     <div class="panel panel-default">
     	<div class="panel-heading">
     	<h3 class="panel-title">{{Question}}</h3>
 	  </div>
     <div class="panel-body">
     <ul class="list-group" id="answer">
-        <li class="list-group-item" id="answerA" value="A">A.     {{A}}</li>
-        <li class="list-group-item" id="answerB"value="B">B.    {{B}}</li>
-        <li class="list-group-item" id="answerC"value="C">C.    {{C}}</li>
-        <li class="list-group-item" id="answerD"value="D">D.    {{D}}</li>
-        <li class="list-group-item" id="answerE"value="E">E.    {{E}}</li>
+        <li class="list-group-item" name="answer" id="A">A.     {{A}}</li>
+        <li class="list-group-item" name="answer" id="B">B.    {{B}}</li>
+        <li class="list-group-item" name="answer" id="C">C.    {{C}}</li>
+        <li class="list-group-item" name="answer" id="D">D.    {{D}}</li>
+        <li class="list-group-item" name="answer" id="E">E.    {{E}}</li>
         </ul>
+        <button type="button" id="submitAnswer" class="btn btn-default">Answer</button>
         {{#if imagePresent}}
           <p>There are images</p>
           {{/if}}
+       {{#if choice}}
         {{> responseToAnswer}}
-      	<!--<p>
-      	Answer:
-      	</p>
-		  <div class="btn-group">
-			  <button type="button" class="btn btn-default">A</button>
-			  <button type="button" class="btn btn-default">B</button>
-			  <button type="button" class="btn btn-default">C</button>
-			  <button type="button" class="btn btn-default">D</button>
-			  <button type="button" class="btn btn-default">E</button>
-		</div>-->
+        {{/if}}
 	</div>
-      	<!--<div class="input-group">
-		 <span class="btn-group-vertical">
-			 <button type="button" class="btn btn-default btn-block">A. {{A}}</button>
-			 <button type="button" class="btn btn-default btn-block">B. {{B}}</button>
-			 <button type="button" class="btn btn-default btn-block">C. {{C}}</button>
-			 <button type="button" class="btn btn-default btn-block">D. {{D}}</button>
-			 <button type="button" class="btn btn-default btn-block">E. {{E}}</button>
-		</span>
-	</div>-->
     </div>
   </div>
 </template>

@@ -4543,7 +4543,24 @@ a.thumbnail:focus {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #ffffff;
+  background-color: #fff;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+  border: 1px solid #dddddd;
+}
+.list-group-item:hover {
+  background-color: #ffa;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+.list-group-item.selected {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: yellow;
   border: 1px solid #dddddd;
 }
 .list-group-item:first-child {
@@ -4630,6 +4647,20 @@ a.list-group-item:focus {
   /* 2 */
 
 }
+/* Here is the two added CSS things to work with the template helper to add highlighting to the answer*/
+./*li {
+    background-color: #fff;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+.highlight,
+li:hover {
+    background-color: #ffa;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}*/
 .panel-body:after {
   clear: both;
 }
@@ -4641,7 +4672,7 @@ a.list-group-item:focus {
 }
 .panel > .list-group .list-group-item:hover {
   border-width: 1px 0;
-  background-color: yellow;
+  background-color: "yellow";
 }
 .panel > .list-group .list-group-item:first-child {
   border-top-right-radius: 0;

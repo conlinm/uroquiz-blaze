@@ -1,10 +1,6 @@
 <template name="responseToAnswer">
-	{{#if selectedAnswer}}
 <div class="details">
-   <div class="none">You Answered! The correct answer is {{Answer}}</div>
-   {{Explanation}}
+   <div class="correct">{{choice}} is correct! The answer is {{Answer}}</div>
+  <h3>Explanation:</h3> {{Explanation}}
   </div>
-  {{else}}
-  <div class="none"><h4>Click an answer</h4></div>
-  {{/if}}
 </template>
