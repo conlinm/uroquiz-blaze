@@ -5,6 +5,10 @@ This is an app built using meteor. It makes use of study questions for the urolo
 ###Current packages:###
 * remove autopublish
 * add bootstrap-3
-* add spin
 * add accounts-ui-bootstrap-3
+*add accounts-password
+*add accounts-google
+*add accounts-facebook
+* add spin
 * add iron-router
+*add jquery

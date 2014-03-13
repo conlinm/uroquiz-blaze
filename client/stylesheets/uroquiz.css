@@ -4555,12 +4555,12 @@ a.thumbnail:focus {
     -moz-transition: background-color 0.2s linear;
     -o-transition: background-color 0.2s linear;
 }
-.list-group-item.selected {
+.list-group-item-selected {
   position: relative;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: yellow;
+  background-color:#ffff00;
   border: 1px solid #dddddd;
 }
 .list-group-item:first-child {

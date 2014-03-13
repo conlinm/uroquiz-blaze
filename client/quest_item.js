@@ -4,11 +4,13 @@ Session.setDefault('isSelected', null);
 
 Template.questItem.events({
 	'click #answer': function (e, tmpl){
+		var ansList = document.getElementsByName("answer");
+		for (var i = 0; i < ansList.length; i++) {
+			ansList[i].removeAttribute("style");
+		}
 		var ans = e.target.id;
-		// var answer = tmpl.find("[#answer]")
-		e.currentTarget.style.backgroundColor = " ";
-		e.target.style.backgroundColor = "yellow";
 		Session.set("selectedAnswer", ans);
+		e.target.style.backgroundColor = "yellow";
 	},
 	'click #submitAnswer': function (e, tmpl){
 		var myAnswer = Session.get("selectedAnswer");
@@ -24,8 +26,3 @@ Template.questItem.helpers  ({
 Template.questItem.imagePresent = function() {
 	return ! _.contains(this.Image_File, null);
 }
-// $('li').click(
-// 	function(){
-// 		$('.highlight').removeClass('highlight');
-//         		$(this).addClass('highlight');
-//         	});
