@@ -11,4 +11,4 @@ This is an app built using meteor. It makes use of study questions for the urolo
 *add accounts-facebook
 * add spin
 * add iron-router
-*add jquery
+* add jquery
